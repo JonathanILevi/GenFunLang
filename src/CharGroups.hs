@@ -1,6 +1,6 @@
 module CharGroups where
 import qualified Prelude
-import Prelude ((==))
+import Prelude ((==),(||))
 import qualified Data.Char (isDigit, isAlpha) 
 
 charGroupsIs =	[ isSpace	
@@ -18,14 +18,14 @@ individualCharsIs =	[ isOpenParen
 isSpace	x	= x==' '
 isTab	x	= x=='\t'
 isNewLine	x	= x=='\n'
-isAlpha	x	= Data.Char.isAlpha x
+isAlpha	x	= Data.Char.isAlpha x || x=='_'
 isDigit	x	= Data.Char.isDigit x
 isDot	x	= x=='.'
 isSymbol	x 	= Prelude.elem x symbols
 isOpenParen	x 	= x=='('
 isCloseParen	x 	= x==')'
 
-symbols	= "-+/*%^~?!=&@$|"
+symbols	= "-+/*%^~?!=&@$|."
 
 
 

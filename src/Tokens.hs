@@ -1,8 +1,8 @@
 module Tokens where
 
-data TokenType = Space | OtherSpace | Fun | Op | Num | String | Char | OpenParen | CloseParen
-	deriving (Show, Eq)
-type Token = (TokenType, String)
+data Token = Space Integer | Fun String | Op String | Num String | String String | Char String | Paren OpenClose
+	deriving (Show)
 
-
+data OpenClose = Open | Close
+	deriving (Show)
 
