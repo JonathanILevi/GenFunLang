@@ -1,4 +1,4 @@
-module FunArray where
+module Gen.FunArray where
 
 funOp :: (Bool->Bool->Bool) -> [(a->Bool)] -> a -> Bool
 funOp com (f:f2:[]) x = (f x) `com` (f2 x)
